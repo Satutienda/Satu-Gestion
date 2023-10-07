@@ -1,0 +1,403 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Kalam:wght@300&display=swap');
+
+
+/*!----------------------RESET----------------------*/
+
+*{margin: 0; /**----DEL BORDE PARA AFUERA----*/
+padding: 0;}
+
+body {font-family: 'Exo', sans-serif;} 
+
+
+
+
+/**----------------------HEADER----------------------*/
+
+header{
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: sticky;
+    z-index: 2; /**para que no se oculte la barra navegadora al bajar**/
+    top: 0px;
+}
+
+header div img{
+    overflow: hidden; 
+    border-radius: 9%;
+}
+
+header nav ul{
+    list-style: none; /**--esto se usa para sacar los puntos de las listas--**/
+    display: flex;
+} 
+
+
+header nav ul li a{
+    color: black;
+    font: size 20px;
+    text-decoration: none; /**--para quitar apariencia ej lineas--*/
+}
+
+header nav ul li a :hover{/**pseudoclase, la estoy usando en este caso como un activador**/
+    color:#00f5d4;
+    transition-duration: 2s;
+    /**transition-timing-function: periodo de tiempo para retrasar la ejecucion**/
+}
+
+header nav ul li{
+/**--display: inline-block; pone las listas en bloque--*/
+    margin: 10px;
+    text-decoration: none;
+}
+
+
+/*#------------------------------MAIN-----------------------------*/
+
+/*!------------------------------HERO---------------------------**/
+.hero {
+    height: 75vh;
+    margin-top: 50px;
+    width: 100%;     
+}
+
+.d-md-block{
+    font-size:small;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel-inner{
+    position: relative;   
+}
+
+.carousel-inner h2{
+    position:absolute;
+    font-size: 35px;    
+    background-color: rgba(0, 170, 255, 0.653);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/**!----------------------------------------------------NOVEDADES-----------------------------------------------**/
+.Novedades{
+    border: solid 2px #0d1b2a;
+    background-color: #6600f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Novedades h2{
+    position:absolute;
+    font-size: 35px;    
+    background-color: rgba(0, 170, 255, 0.653);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.GridContenedorNovedades{
+    width: 100%;
+    height: 100%;
+    border: solid 4px #ff206e;
+    /**Habilitar la grilla**/
+    display: grid;
+    /**Declarar filas, me da el alto**/
+    /**grid-template-rows: 60vh;**/
+    grid-auto-rows: 50vh;
+    /**Declarar columnas, me da el ancho. Se recomienda usar fr**/
+    grid-template-columns: 1fr 2fr;
+    /**GAP: Espaciado, simil margin. Pero entre columnas y filas**/
+    column-gap: 5px;
+    /**grid-column-start:1 y grid-column-end:span 3**/
+}
+
+.SegundaNovedad{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.GridNovedades{
+    border: solid 2px #0d1b2a;
+    background-color: #00f5d4;    
+    font-size: x-small;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.GridNovedades img {
+    overflow: hidden;
+}
+
+
+/**!----------------------------------------------------PLANES-----------------------------------------------**/
+.Planes{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content:space-evenly; 
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+.PlanesContenedor{
+    width: 100%;
+    border: 2px solid #0d1b2a;    
+    display: flex;
+    justify-content:space-evenly; /**ME DISTRIBUYE LOS ELEMENTOS EN EL EJE QUE ESTOY TRABAJANDO**/
+    align-items: center; /**ME DISTRIBUYE LOS ELEMENTOS EN EL EJE CONTRARIO AL QUE ESTOY TRABAJANDO**/    
+    flex-wrap: wrap;
+    transition: 1s;
+    
+}
+
+.Planes h2 {
+    position:absolute;
+    font-size: 35px;    
+    background-color: rgba(0, 170, 255, 0.653);
+    padding: 5px;
+    border-radius: 5px;    
+}
+
+.PlanesContenedor div {/**Con esto, le doy altura, ancho, borde, espacio entre tarjetas, a cada una de las tarjetas.**/
+    width: 350px;
+    height: 450px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
+    border-radius: 50%;
+    text-align:center;
+    display: flex;
+    justify-content:space-evenly; /**ME DISTRIBUYE LOS ELEMENTOS EN EL EJE QUE ESTOY TRABAJANDO**/
+    align-items: center; /**ME DISTRIBUYE LOS ELEMENTOS EN EL EJE CONTRARIO AL QUE ESTOY TRABAJANDO**/    
+    flex-wrap: wrap;
+}
+
+.PlanesContenedor div img :hover{
+    transform: scaleX(2 )
+}
+
+
+
+/**!----------------------------------------------------PORQUE ELEGIRNOS-----------------------------------------------**/
+.elegirnos{
+    width: 100%;
+    font-family: 'Kalam', cursive; 
+    color: #ff0000;
+    display: flex;
+    justify-content: space-between; /**ME DISTRIBUYE LOS ELEMENTOS EN EL EJE QUE ESTOY TRABAJANDO**/
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.TextoPosisionElegirnos{
+    position: absolute;
+}
+
+.elegirnos img{ 
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+}
+
+.pregunta{
+    width: 100%;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.respuesta{
+    width: 750px;
+    margin-left: 10px;
+}
+
+.listaRespuesta{   
+    list-style-type: square; /* Puedes cambiar "disc" a "circle" o "square" para cambiar el estilo de viñetas */
+    margin-left: 50px; /* Añade un margen izquierdo para ajustar la posición de la lista */
+    padding-left: 0; /* Elimina el relleno predeterminado de la lista */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+
+/**!----------------------------------------------------BOT-----------------------------------------------**/
+.Bot{
+    position: fixed;
+    right:35px ;
+    bottom:60px;
+    overflow: hidden; /* Oculta cualquier contenido que se desborde de la caja */
+    border-radius: 50%;
+    margin: 10px;
+}
+
+
+
+
+/**--------------------------------------PAGINASERVICIOS----------------------------------------------**/
+
+.PrimerosPasos{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+   }
+
+.PrimerosPasosDetalle{
+    list-style-type: square; /* Puedes cambiar "disc" a "circle" o "square" para cambiar el estilo de viñetas */
+    margin-left: 50px; /* Añade un margen izquierdo para ajustar la posición de la lista */
+    padding-left: 0; /* Elimina el relleno predeterminado de la lista */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+.RecursosHumanos{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+   }
+
+.RecursosHumanosposicion{
+    width: 700px;
+}
+
+.RecursosHumanosDetalle{
+    list-style-type: square; /* Puedes cambiar "disc" a "circle" o "square" para cambiar el estilo de viñetas */
+    margin-left: 50px; /* Añade un margen izquierdo para ajustar la posición de la lista */
+    padding-left: 0; /* Elimina el relleno predeterminado de la lista */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+.Outsourcing{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+   }
+
+.Outsourcingposicion{
+    width: 700px;
+}
+
+.OutsourcingDetalle{
+    list-style-type: square; /* Puedes cambiar "disc" a "circle" o "square" para cambiar el estilo de viñetas */
+    margin-left: 50px; /* Añade un margen izquierdo para ajustar la posición de la lista */
+    padding-left: 0; /* Elimina el relleno predeterminado de la lista */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+.Tributaria{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+   }
+
+.Tributariaposicion{
+    width: 700px;
+}
+
+.TributariaDetalle{
+    list-style-type: square; /* Puedes cambiar "disc" a "circle" o "square" para cambiar el estilo de viñetas */
+    margin-left: 50px; /* Añade un margen izquierdo para ajustar la posición de la lista */
+    padding-left: 0; /* Elimina el relleno predeterminado de la lista */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+.Importaciones{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+   }
+
+.Importacionesposicion{
+    width: 800px;
+}
+
+.ImportacionesDetalle{
+    list-style-type: square; /* Puedes cambiar "disc" a "circle" o "square" para cambiar el estilo de viñetas */
+    margin-left: 50px; /* Añade un margen izquierdo para ajustar la posición de la lista */
+    padding-left: 0; /* Elimina el relleno predeterminado de la lista */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+.Diseño{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+   }
+
+.Diseñoposicion{
+    width: 700px;
+}
+
+.DiseñoDetalle{
+    list-style-type: square; /* Puedes cambiar "disc" a "circle" o "square" para cambiar el estilo de viñetas */
+    margin-left: 50px; /* Añade un margen izquierdo para ajustar la posición de la lista */
+    padding-left: 0; /* Elimina el relleno predeterminado de la lista */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+
+
+
+
+/**GRIDS**/
+/**habilitar la grilla
+
+display: grids;
+Declarar filas
+grids-template-rows: 200px (tantos px como columnas quiera. con filas defino el alto)
+Declarar columnas
+grids-template-column: 200px (con columnas defino el alto)
+                        1fr 1fr  me hace 2 columnas iguales. son fracciones de tamano del contenedor padre
+
+
+
+
+
+
+
+/*----------------------FOOTER----------------------*/
+
+
+
+footer{ 
+    background-color: #bbd0ff;}
